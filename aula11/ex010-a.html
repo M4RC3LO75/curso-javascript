@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <link rel="stylesheet" href="./CSS/stlye-ex010.css">
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <div>
+        <label for="txtvel">Velocidade do carro: </label>
+        <input type="number" name="txtvel" id="txtvel">
+    </div>
+    <div id="res">Resultado</div>
+    <button id="btnCheck">Verificar</button>
+
+    <script>
+        var button = document.getElementById('btnCheck')
+        button.addEventListener('click', check)
+
+        function check() {
+            var txtv = document.querySelector('input#txtvel')
+            var vel = Number(txtv.value)
+            var lblres = document.querySelector('div#res')
+            lblres.innerHTML = `<p><strong>${vel}</strong> Km/h</p>`
+            if (vel > 60) {
+                lblres.innerHTML += `<p>A velocidade estava <strong>acima</strong> do permitido.</p>`
+                lblres.innerHTML += `<p><strong>MULTADO!</strong></p>`
+            } else {
+                lblres.innerHTML += `<p>A velocidade estava <strong>dentro</strong> do permitido.</p>`
+            }
+            lblres.innerHTML += `<p>Dirija sempre com cinto de segurança.</p>`
+        }
+    </script>
+</body>
+</html>

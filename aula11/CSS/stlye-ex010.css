@@ -1,0 +1,37 @@
+body {
+    background-color: gray;
+    font: normal 1.5em Arial;
+}
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    width: 380px;
+    border: 1px solid white;
+}
+
+div input{ 
+    font: normal 14pt Arial;
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+}
+
+div#res {
+    display: block;
+    border: none;
+    padding: 10px;
+    font-size: 15pt;
+}
+
+button {
+    margin-top:30px;
+    font: normal 14pt Arial;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
