@@ -1,7 +1,7 @@
 'use strict';
 
 const inputvalue = document.querySelector('#inumber');
-const resultBox = document.getElementById('result-box')
+const resultBox = document.querySelector('#result-box')
 let calcButton = document.querySelector('#calc-button')
 
 function calculate() {
@@ -10,7 +10,6 @@ function calculate() {
     for (var c = 1; c <= 10; c++) {
         var result = c * number;
         resultBox.innerHTML += `<div class="result-line">${c} x ${number} = ${result}</div>`;
-        console.log(number);
     }
 }
 
