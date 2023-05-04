@@ -11,8 +11,17 @@ function count() {
     var endValue = Number(end.value);
     var stepValue = Number(step.value);
 
-    for (var c= startValue; c <= endValue; c += stepValue){
-        result.innerHTML = c + ', '
-
+    if (startValue !=='' && endValue !=='' && stepValue !=='') {
+        if (startValue < endValue) {
+        result.textContent = startValue;
+            for (var c = startValue + stepValue; c <= endValue; c += stepValue) {
+                result.innerHTML += ', ' + c;
+            }
+        } else if (startValue > endValue) {
+            result.textContent = startValue;
+            for (var c = startValue - stepValue; c >= endValue; c -= stepValue) {
+                result.innerHTML += ', ' + c;
+            }
+            }
     }
 }
